@@ -58,7 +58,7 @@ FOUNDATION_EXPORT const unsigned char FYMSLVersionString[];
 	}
 }
 - (FYNodeAdpter * )objectForSEL:(NSString *)selName{
-    NSAssert(selName.length == 0, @"sel name不能为空");
+    NSAssert(selName.length != 0, @"sel name不能为空");
     return [self.info objectForKey:selName];
 }
 +(FYNodeAdpter *)objectForSEL:(NSString *)selName{
