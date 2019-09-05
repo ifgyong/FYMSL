@@ -21,8 +21,8 @@ git clone git@github.com:ifgyong/FYMSL.git
 ```
 // 每个函数的回调，独立可以单独设置的。
 FYVCcall *cll = [FYVCcall shared];
-[cll setCallback:^(CFAbsoluteTime loadTime, UIViewController * _Nonnull kvo_self, NSString * _Nonnull funcName,NSString *str) {
-	const char *clsName = NSStringFromClass(kvo_self.class).UTF8String;
+[cll setCallback:^(CFAbsoluteTime loadTime, UIViewController * _Nonnull vc, NSString * _Nonnull funcName,NSString *str) {
+	const char *clsName = NSStringFromClass(vc.class).UTF8String;
 	printf("cls:%s func:%s %f %s \n",clsName,funcName.UTF8String,loadTime,str.UTF8String);
 }];
 ```
