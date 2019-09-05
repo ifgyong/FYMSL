@@ -17,7 +17,7 @@ git clone git@github.com:ifgyong/FYMSL.git
 -----
 ![](./jd.png)
 
-### 函数声明周期回调
+### 函数生命周期和耗时操作回调
 ```
 // 每个函数的回调，独立可以单独设置的。
 FYVCcall *cll = [FYVCcall shared];
@@ -34,7 +34,7 @@ cls:ViewController func:viewDidLoad 2.001058 2019 09-03 16:25:45
 cls:ViewController func:viewWillAppear: 0.000000 2019 09-03 16:25:45 
 cls:ViewController func:viewDidAppear: 0.000000 2019 09-03 16:25:45 
 ```
-### 查看**MethodSwizzling**总的记录
+### 查看**MethodSwizzling**总记录
 ```
 NSLog(@"%@",[FYNodeManger shared].description);
 
