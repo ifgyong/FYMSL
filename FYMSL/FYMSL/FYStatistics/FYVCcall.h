@@ -11,7 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef void(^funcCallBack)(CFAbsoluteTime loadTime,UIViewController *kvo_self, NSString *funcName,NSString *dateString);
+typedef void(^funcCallBack)(CFAbsoluteTime loadTime,UIViewController *vc, NSString *funcName,NSString *dateString);
 
 @interface FYVCcall : NSObject
 @property (nonatomic,copy) funcCallBack callback;
