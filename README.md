@@ -5,11 +5,19 @@ MethodSwizzling是统计APP中所有生命周期函数和记录MethodSwizzling�
 
 如何使用
 -------------
-`git clone git@github.com:ifgyong/FYMSL.git`然后使用`Xcode`生成的动态库，直接拖入工程目录即可。
+首先
+
+```
+git clone git@github.com:ifgyong/FYMSL.git
+```
+
+然后使用`Xcode`生成的动态库，直接拖入工程目录即可。
+
 需要注意的点：
+-----
 ![](./jd.png)
 
-函数声明周期回调
+### 函数声明周期回调
 ```
 // 每个函数的回调，独立可以单独设置的。
 FYVCcall *cll = [FYVCcall shared];
@@ -19,14 +27,14 @@ FYVCcall *cll = [FYVCcall shared];
 }];
 ```
 
-日志：
+### 日志：
 
 ```
 cls:ViewController func:viewDidLoad 2.001058 2019 09-03 16:25:45 
 cls:ViewController func:viewWillAppear: 0.000000 2019 09-03 16:25:45 
 cls:ViewController func:viewDidAppear: 0.000000 2019 09-03 16:25:45 
 ```
-查看**MethodSwizzling**总的记录
+### 查看**MethodSwizzling**总的记录
 ```
 NSLog(@"%@",[FYNodeManger shared].description);
 
@@ -49,7 +57,7 @@ NSLog(@"%@",[FYNodeManger shared].description);
 ⇄ | +           test1 -> test4 -> imp:0x105c6c660
 ```
 
-查看单独SEL记录
+### 查看单独SEL记录
 ```
 	NSLog(@"\n%@",[FYNodeManger objectForSEL:@"test1"]);
   
