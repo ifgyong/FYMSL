@@ -7,20 +7,16 @@ env:
   - FRAMEWORK_NAME=FYMSL
 before_install:
 - brew update
-# - brew outdated carthage || brew upgrade carthage
-#- carthage bootstrap --no-use-binaries --platform iOS 
-# before_script:
-# - carthage bootstrap
 before_deploy:
 - carthage build --no-skip-current
 - carthage archive $FRAMEWORK_NAME
 deploy:
   provider: releases
   api_key:
-    secure: MxO87Ww+sLgDNW2tJbJlGp+xwyHXaHBT/bZJ5ITYsXTel5FpeRkqJ6SzMuJnF5jRxx+mSqa29f7l05or76N1TvHIWYkdbq8k7EKXqtxq+TDufjAUPxp2cnbOz5lklfAQKupZN59AbQg1UeDAt1sB/O39gQqCaDCJZXIjUXpWnxyV76GuUYFGIYAiFP/C5p7LErs3oAC3CoFPGpy7RAM709bJ+T9RyGSE2SzgRuEYSl4nBmrpfoJ2SCPqQYCWKiERW04L1+fy58ikvJGDDW2c2MmnEWfLiNccxjPKl+5CmXJ1u2CXNPAGEim2X+f1TBbOCWLVivDqh9uA4HeAylrsabc+pHm31Soi8MYmnYiS/lU9cbIYl0pacIzeVoL4VO3BCCuobnsydWfMu36gnySwItmraEYzqk4jqs1nNW5YXfoFawlQKvHx8aW7CJE1n8UkAIQG2h0BjIV0NDt1QwTajDbvwaCpFK+rNR4oSJi27OuJRC5CpI7F+RDsrjVOP++SJ8Fpj339i8YMh+9aWw8PHpXCeRd2cATYmEpW9fXuQRi2Nvl7LaZIUqnixni7X6CXoT+CpFLeqhjCIif9qdrE1GHKurcNGcD4oJWGE8YPApWFobmM0onke9BTTKuWV+sV3hQH4nBf/ZWR3w+5fzDYMcTeLbLv3XWOS1TOL3mpZdc=
+    secure: QEbAvLQoDg9QUz06jr9tqef5LpUu6w2j65fGz25tIvFJ03AtcmeLBRu4XTMaMZg3L+ldYaI0APnYvQXU1B0mjw/644MfXQ0tmLsJgv6qPB87zq9DSSnT3al/U80+SNXLqzyXpRXKiK/colrXK+/chzKmntpyM+nhrrnFkWdGnrt2/x83hIJ0WifJMS2iVECWI2r4OO5eidEBS5OLW+J8ahzsjgFRIJLX22QTFOYeYpy+vhbDrSU+XzwlqAZadV6ALzrrftK35RnPTkE3ubU9S6aDbPEatYl3VTMFACq8bb/SZQoFiyNiutMvp75kSvUjfKqhkCpA4mvg5lGTzAsaPDM190RDo6M+oQq1q/MEi1cgrIGz4g6wUtTkAPDQ8uroLT+jdeJmEF4YyQeNhROB1Xz7s/t5qsVmF7ij95uMc8qCSVQZf6hD7dcaM1YhlYYdEmSY1P+0KOfBWhXBEJ33h6Lq488n+LzHezwJzCLskZ59rSFWLykBehM2rWkRSbVDB1tO5AqZvQx+y0ewH1pQhSZnHmyVCIeub5bsxS61u2oyboXdiMWnkocxq0V1USiVpmEquLUED998oTNpP4gRTTxiAjDIF6Sxe4dKg8XEY0KgoM0WejsAnUkSkJXz7+GcTefsudEhh1BYEP2jWMBoeWC6Fb4ls0NMx8he5WHxeGA=
   file: FYMSL.framework.zip
   on:
     repo: ifgyong/FYMSL
-script:
-- xcodebuild test -project "$PROJECT_NAME" -scheme "$SCHEME" -destination "$DESTINATION"
-  -sdk "$SDK" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
+#script:
+#- xcodebuild test -project "$PROJECT_NAME" -scheme "$SCHEME" -destination "$DESTINATION"
+ # -sdk "$SDK" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
