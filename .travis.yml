@@ -7,11 +7,10 @@ env:
   - FRAMEWORK_NAME=FYMSL
 before_install:
 - brew update
-- brew outdated carthage || brew upgrade carthage
-- carthage bootstrap --no-use-binaries --platform iOS
-- 
-before_script:
-- carthage bootstrap
+# - brew outdated carthage || brew upgrade carthage
+#- carthage bootstrap --no-use-binaries --platform iOS 
+# before_script:
+# - carthage bootstrap
 before_deploy:
 - carthage build --no-skip-current
 - carthage archive $FRAMEWORK_NAME
