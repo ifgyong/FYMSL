@@ -20,6 +20,9 @@ before_deploy:
 deploy:
   provider: releases
   api_key: "176de19b722478d0d704152c9b5efdf55d5cb1a5"
-  file: "no file upload"
+  file: FYMSL.framework.zip
   skip_cleanup: true
   draft: true
+  on:
+     repo: ifgyong/FYMSL
+      tag: true
