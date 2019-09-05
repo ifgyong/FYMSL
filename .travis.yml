@@ -1,28 +1,26 @@
 language: objective-c
 osx_image: xcode9.3
 xcode_project: FYMSL
-# xcode_workspace: <WORKSPACE_PLACEHOLDER>
 xcode_scheme: FYMSL
 xcode_sdk: iphonesimulator9.3
 env:
   global:
-    - FRAMEWORK_NAME=FYMSL
+  - FRAMEWORK_NAME=FYMSL
 before_install:
-  - brew update
-  - brew outdated carthage || brew upgrade carthage
+- brew update
+- brew outdated carthage || brew upgrade carthage
 before_script:
-  # bootstrap the dependencies for the project
-  # you can remove if you don't have dependencies
-  - carthage bootstrap
+- carthage bootstrap
 before_deploy:
-  - carthage build --no-skip-current
-  - carthage archive $FRAMEWORK_NAME
+- carthage build --no-skip-current
+- carthage archive $FRAMEWORK_NAME
 deploy:
   provider: releases
-  api_key: "176de19b722478d0d704152c9b5efdf55d5cb1a5"
+  api_key:
+    secure: MxO87Ww+sLgDNW2tJbJlGp+xwyHXaHBT/bZJ5ITYsXTel5FpeRkqJ6SzMuJnF5jRxx+mSqa29f7l05or76N1TvHIWYkdbq8k7EKXqtxq+TDufjAUPxp2cnbOz5lklfAQKupZN59AbQg1UeDAt1sB/O39gQqCaDCJZXIjUXpWnxyV76GuUYFGIYAiFP/C5p7LErs3oAC3CoFPGpy7RAM709bJ+T9RyGSE2SzgRuEYSl4nBmrpfoJ2SCPqQYCWKiERW04L1+fy58ikvJGDDW2c2MmnEWfLiNccxjPKl+5CmXJ1u2CXNPAGEim2X+f1TBbOCWLVivDqh9uA4HeAylrsabc+pHm31Soi8MYmnYiS/lU9cbIYl0pacIzeVoL4VO3BCCuobnsydWfMu36gnySwItmraEYzqk4jqs1nNW5YXfoFawlQKvHx8aW7CJE1n8UkAIQG2h0BjIV0NDt1QwTajDbvwaCpFK+rNR4oSJi27OuJRC5CpI7F+RDsrjVOP++SJ8Fpj339i8YMh+9aWw8PHpXCeRd2cATYmEpW9fXuQRi2Nvl7LaZIUqnixni7X6CXoT+CpFLeqhjCIif9qdrE1GHKurcNGcD4oJWGE8YPApWFobmM0onke9BTTKuWV+sV3hQH4nBf/ZWR3w+5fzDYMcTeLbLv3XWOS1TOL3mpZdc=
   file: FYMSL.framework.zip
-  skip_cleanup: true
-  draft: true
   on:
-     repo: ifgyong/FYMSL
-      tag: true
+    repo: ifgyong/FYMSL
+script:
+- xcodebuild test -project "$PROJECT_NAME" -scheme "$SCHEME" -destination "$DESTINATION"
+  -sdk "$SDK" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
