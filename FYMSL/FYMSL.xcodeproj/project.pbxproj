@@ -129,9 +129,9 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EEA733BB2320A9840037D913 /* FYKVOObserver.h in Headers */,
-				EEA733C72320A9840037D913 /* fishhook.h in Headers */,
 				EEA7339C2320A9560037D913 /* FYMSL.h in Headers */,
+				EEA733C72320A9840037D913 /* fishhook.h in Headers */,
+				EEA733BB2320A9840037D913 /* FYKVOObserver.h in Headers */,
 				EEA733BD2320A9840037D913 /* FYVCcall.h in Headers */,
 				EEA733C02320A9840037D913 /* FYKVORemover.h in Headers */,
 				EEA733BC2320A9840037D913 /* FYNodeMap.h in Headers */,

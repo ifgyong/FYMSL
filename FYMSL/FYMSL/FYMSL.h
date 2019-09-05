@@ -8,14 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-//! Project version number for FYMSL.
-FOUNDATION_EXPORT double FYMSLVersionNumber;
-
-//! Project version string for FYMSL.
-FOUNDATION_EXPORT const unsigned char FYMSLVersionString[];
-
-// In this header, you should import all the public headers of your framework using statements like #import <FYMSL/PublicHeader.h>
-
 
 #import "FYNodeMap.h"
 #import "FYNodeAdpter.h"
