@@ -5,9 +5,9 @@ MethodSwizzling是统计APP中所有生命周期函数和记录MethodSwizzling�
 
 如何使用
 -------------
-`git clone `然后使用生成的动态库，直接拖入工程目录即可。
+`git clone git@github.com:ifgyong/FYMSL.git`然后使用`Xcode`生成的动态库，直接拖入工程目录即可。
 需要注意的点：
-
+![](./jd.png)
 
 函数声明周期回调
 ```
@@ -26,7 +26,7 @@ cls:ViewController func:viewDidLoad 2.001058 2019 09-03 16:25:45
 cls:ViewController func:viewWillAppear: 0.000000 2019 09-03 16:25:45 
 cls:ViewController func:viewDidAppear: 0.000000 2019 09-03 16:25:45 
 ```
-查看**MethodSwizzling**记录
+查看**MethodSwizzling**总的记录
 ```
 NSLog(@"%@",[FYNodeManger shared].description);
 
@@ -53,12 +53,12 @@ NSLog(@"%@",[FYNodeManger shared].description);
 ```
 	NSLog(@"\n%@",[FYNodeManger objectForSEL:@"test1"]);
   
-// ↴ | + test1 -> imp:0x10b5de550 
-// ↴ | +   test1 -> imp:0x10b5de580 
-// ↴ | +     test1 -> imp:0x10b5de4f0 
-// ⇄ | +       test1 -> test2 -> imp:0x10b5de4f0 
-// ⇄ | +         test1 -> test3 -> imp:0x10b5de520 
-// ⇄ | +           test1 -> test4 -> imp:0x10b5de550
+↴ | + test1 -> imp:0x10b5de550 
+↴ | +   test1 -> imp:0x10b5de580 
+↴ | +     test1 -> imp:0x10b5de4f0 
+⇄ | +       test1 -> test2 -> imp:0x10b5de4f0 
+⇄ | +         test1 -> test3 -> imp:0x10b5de520 
+⇄ | +           test1 -> test4 -> imp:0x10b5de550
 ```
 
 
@@ -66,6 +66,8 @@ NSLog(@"%@",[FYNodeManger shared].description);
 👨🏻‍💻 Author
 -------------
 fgyong fgyong214@gmail.com
+
+欢迎PR，欢迎iss
 
 👮🏻 License
 -------------
