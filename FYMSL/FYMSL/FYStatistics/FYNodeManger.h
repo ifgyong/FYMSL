@@ -34,7 +34,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (FYNodeAdpter * )objectForSEL:(NSString *)selName;
 
 /**
- 获取节点
+ 获取子节点
  */
 + (FYNodeAdpter * )objectForSEL:(NSString *)selName;
 @end
