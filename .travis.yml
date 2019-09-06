@@ -22,4 +22,4 @@ deploy:
   on:
     repo: ifgyong/FYMSL
 script:
- - xcodebuild -project FYMSL.xcodeproj -scheme "FYMSLSimple" -configuration Release -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone X,OS=12.2'
+ - xcodebuild -project FYMSL.xcodeproj -scheme "FYMSLSimple" -configuration Release -sdk iphonesimulator -destination 'platform=iOS Simulator'
