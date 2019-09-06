@@ -2,7 +2,7 @@ language: objective-c
 osx_image: xcode10.2
 xcode_project: FYMSL.xcodeproj
 xcode_scheme: FYMSLSimple
-xcode_sdk: iphoneos12.2
+#xcode_sdk: iphoneos12.2
 
 env:
   global:
@@ -17,6 +17,6 @@ deploy:
   on:
     repo: ifgyong/FYMSL
     tags: true
-script: xcodebuild -project FYMSL.xcodeproj -scheme "FYMSLSimple" -sdk iphonesimulator12.4 -destination 'platform=iOS Simulator,name=iPhone X,OS=12.2'
+script: xcodebuild -project FYMSL.xcodeproj -scheme "FYMSLSimple" -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone X,OS=12.2'
 
 # - xcodebuild -project FYMSL.xcodeproj -scheme "FYMSLSimple" -configuration Release -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone XS'
