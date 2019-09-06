@@ -1,10 +1,12 @@
 language: objective-c
 osx_image: xcode10
-xcode_project: FYMSL
+xcode_project: FYMSL.xcodeproj
 xcode_scheme: FYMSL
 env:
   global:
   - FRAMEWORK_NAME=FYMSL
+  - PROJECT_NAME=FYMSL.xcodeproj
+  - SCHEME = FYMSL
 before_install:
 - brew update
 before_deploy:
