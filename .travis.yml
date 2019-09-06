@@ -1,8 +1,8 @@
 language: objective-c
-osx_image: xcode10
+osx_image: xcode10.2
 xcode_project: FYMSL.xcodeproj
 xcode_scheme: FYMSLSimple
-xcode_sdk: iphonesimulator
+xcode_sdk: iphoneos12.2
 
 env:
   global:
