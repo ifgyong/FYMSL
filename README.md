@@ -68,24 +68,34 @@ NSLog(@"%@",[FYNodeManger shared].description);
 ⇄ | +         test1 -> test3 -> imp:0x10b5de520 
 ⇄ | +           test1 -> test4 -> imp:0x10b5de550
 ```
-
-使用pod
+📲 Installation
+----------
+### CocoaPods
+[CocoaPods](https://cocoapods.org/) 是专门在Cocoa工程上使用的，你可以使用下列命令安装:
 
 ```
-# platform :ios, '9.0'
+$ gem install cocoapods
+```
 
-target 'Demo' do
-  pod 'FYMSL', '~> 0.0.1'
-  use_frameworks! //不能注释
+只需要在你的Podfile 下面即可
 
-
+```
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '9.0'
+use_frameworks!
+target 'MyApp' do
+	pod 'FYMSL'
 end
 ```
-之后
+
+你需要将`MyApp`替换成你自己的`project's name`
+
+然后运行命令：
+
 ```
-pod setup
-pod update
+$ pod install
 ```
+ 
 
 
 
