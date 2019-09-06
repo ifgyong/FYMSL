@@ -69,6 +69,25 @@ NSLog(@"%@",[FYNodeManger shared].description);
 ⇄ | +           test1 -> test4 -> imp:0x10b5de550
 ```
 
+使用pod
+
+```
+# platform :ios, '9.0'
+
+target 'Demo' do
+  pod 'FYMSL', '~> 0.0.1'
+  use_frameworks! //不能注释
+
+
+end
+```
+之后
+```
+pod setup
+pod update
+```
+
+
 
 
 👨🏻‍💻 Author

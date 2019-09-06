@@ -1,12 +1,14 @@
 language: objective-c
 osx_image: xcode10
 xcode_project: FYMSL.xcodeproj
-xcode_scheme: FYMSL
+xcode_scheme: FYMSLSimple
+xcode_sdk: iphoneos12.2
+
 env:
   global:
   - FRAMEWORK_NAME=FYMSL
   - PROJECT_NAME=FYMSL.xcodeproj
-  - SCHEME = FYMSL
+  - SCHEME = FYMSLSimple
 before_install:
 - brew update
 before_deploy:
@@ -19,6 +21,5 @@ deploy:
   file: FYMSL.framework.zip
   on:
     repo: ifgyong/FYMSL
-#script:
-#- xcodebuild test -project "$PROJECT_NAME" -scheme "$SCHEME" -destination "$DESTINATION"
- # -sdk "$SDK" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
+script:
+ - xcodebuild -project FYMSL.xcodeproj -scheme "FYMSLSimple" -configuration Release -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone X,OS=12.2'
