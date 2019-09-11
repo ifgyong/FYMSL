@@ -16,7 +16,7 @@ git clone git@github.com:ifgyong/FYMSL.git
 
 需要注意的点：
 -----
-![](./jd.png)
+![](./jd.jpeg)
 
 
 ### CocoaPods
@@ -113,3 +113,5 @@ fgyong fgyong214@gmail.com
 -------------
 
 VCStatistics is available under the MIT license. See the LICENSE file for more info.
+
+
