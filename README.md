@@ -1,5 +1,6 @@
 FYMSL
 -------------
+![pod](https://img.shields.io/badge/pod-0.0.1-green) ![Cocoapods platforms](https://img.shields.io/cocoapods/p/FYMSL) ![GitHub release (latest by date)](https://img.shields.io/github/v/release/ifgyong/FYMSL)
 
 MethodSwizzling是统计APP中所有生命周期函数和记录MethodSwizzling日志的工具。
 
