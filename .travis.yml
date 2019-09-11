@@ -19,6 +19,6 @@ deploy:
   on:
     repo: ifgyong/FYMSL
     tags: true
-script: xcodebuild -project FYMSL.xcodeproj -scheme FYMSLSimple  -destination 'platform=iOS Simulator,OS=12.2,name=iPhone X' #-sdk iphonesimulator
+script: xcodebuild -project FYMSL.xcodeproj -scheme FYMSLSimple  -destination 'platform=iOS Simulator,OS=12.2,name=iPhone Xs' #-sdk iphonesimulator
        #xcodebuild -project FYMSL.xcodeproj -scheme FYMSLSimple -destination platform\=iOS\ Simulator,OS\=12.2,name\=iPhone\ X build test
 # - xcodebuild -project FYMSL.xcodeproj -scheme "FYMSLSimple" -configuration Release -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone XS'
