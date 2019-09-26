@@ -78,11 +78,11 @@ FOUNDATION_EXPORT const unsigned char FYMSLVersionString[];
 	[str appendString:@"⇄ | + test2 -> test1 -> test3 -> imp:0x105c6c630\n\n"];
 	[str appendString:@"例子2：test1 的imp替换到0x105c6c660，然后又替换到0x105c6c690，又替换到0x105c6c600，\n又交换到了test2，又交换到了test3->又交换到了test4\n\n"];
 	[str appendString:@"↴ | + test1 -> imp:0x105c6c660\n"];
-	[str appendString:@"↴ | +   test1 -> imp:0x105c6c690 \n"];
-	[str appendString:@"↴ | +     test1 -> imp:0x105c6c600\n"];
-	[str appendString:@"⇄ | +       test1 -> test2 -> imp:0x105c6c600\n"];
-	[str appendString:@"⇄ | +         test1 -> test3 -> imp:0x105c6c630\n"];
-	[str appendString:@"⇄ | +           test1 -> test4 -> imp:0x105c6c660\n\n"];
+	[str appendString:@"↴ | + + test1 -> imp:0x105c6c690 \n"];
+	[str appendString:@"↴ | + + + test1 -> imp:0x105c6c600\n"];
+	[str appendString:@"⇄ | + + + + test1 -> test2 -> imp:0x105c6c600\n"];
+	[str appendString:@"⇄ | + + + + + test1 -> test3 -> imp:0x105c6c630\n"];
+	[str appendString:@"⇄ | + + + + + + test1 -> test4 -> imp:0x105c6c660\n\n"];
 	[str appendString:@"=============================================================\n"];
 
 	for (FYNodeAdpter *item in self.info.allValues) {

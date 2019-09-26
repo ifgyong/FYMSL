@@ -42,7 +42,7 @@
 				[str appendString:subStr];
 			}
 			
-			[head appendString:@"  "];
+			[head appendString:@" +"];
         }
     }
     return [str copy];
